@@ -1,10 +1,11 @@
-import React from 'react'
 
 const Link = ({route}) => {
-    console.log(route);
+    const {name, path} = route;
   return (
     <div>
-      link
+       <li>
+        <a href={path}>{name}</a>
+       </li>
     </div>
   )
 }
