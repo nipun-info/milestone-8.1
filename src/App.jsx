@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import '../src/App.css'
 import PriceOptions from "./components/PriceOption/PriceOptions";
+import ReChart from "./components/ReCharts/ReChart";
 
 
 export default function App() {
@@ -12,6 +13,8 @@ export default function App() {
       <h1 className="text-3xl font-bold underline mt-8">Welcome to Milestone</h1>
 
       <PriceOptions />
+
+      <ReChart />
 
     </div>
   );
