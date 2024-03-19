@@ -3,10 +3,12 @@ import '../src/App.css'
 
 export default function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Welcome to Milestone</h1>
+    <div className="container mx-auto">
 
       <Navbar />
+
+      <h1 className="text-3xl font-bold underline mt-8">Welcome to Milestone</h1>
+
     </div>
   );
 }

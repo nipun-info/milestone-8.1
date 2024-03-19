@@ -4,8 +4,7 @@ import { HiMenuAlt1 } from "react-icons/hi";
 import { IoCloseCircle } from "react-icons/io5";
 
 const Navbar = () => {
-    const [open, setOpen] = useState(false)
-
+  const [open, setOpen] = useState(false);
 
   const routes = [
     { id: 1, path: "/", name: "Home" },
@@ -17,21 +16,24 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="md:flex gap-10">
-        <div className="text-2xl md:hidden" onClick={() => setOpen(!open)}>
-        {
-            open === true ? <IoCloseCircle /> : <HiMenuAlt1 />
-        }
-          
-          
+      <nav className="bg-purple-700 text-white p-4">
+        <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
+          {open === true ? <IoCloseCircle /> : <HiMenuAlt1 />}
         </div>
 
-        {routes.map((route, idx) => (
-          <Link key={idx} route={route} />
-        ))}
+        <ul
+          className={`md:flex gap-10 absolute bg-purple-500 px-6 duration-1000
+        ${open ? "top-16" : "-right-60"}
+        `}
+        >
+          {routes.map((route, idx) => (
+            <Link key={idx} route={route} />
+          ))}
+        </ul>
       </nav>
     </div>
   );
+  0;
 };
 
 export default Navbar;
